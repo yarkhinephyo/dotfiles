@@ -7,6 +7,7 @@ Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'preservim/nerdcommenter'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -17,7 +18,7 @@ autocmd vimenter * ++nested colorscheme gruvbox
 " Nerd commenter toggle to ctrl-/
 nmap <C-_> <Plug>NERDCommenterToggle
 vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
-      
+
 " Tabs and spaces
 set tabstop=2
 set softtabstop=2
@@ -30,6 +31,9 @@ set copyindent
 set number
 set showmatch
 set noswapfile
+
+" Make double-<Esc> clear search highlights
+nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 
 " NERDTree toggle to ctrl-t
 nnoremap <C-t> :NERDTreeToggle<CR>
