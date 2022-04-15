@@ -56,7 +56,7 @@ export LANG=en_US.UTF-8
 # Set `gdircolors` on MacOS
 if [[ "$(uname)" == "Darwin" ]]
 then
-  if [[ `which gdircolors &>/dev/null && $?` != 0 ]]
+  if ! type gdircolors > /dev/null;
   then
     brew install coreutils
   fi

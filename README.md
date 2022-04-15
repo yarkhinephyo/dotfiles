@@ -27,7 +27,7 @@ git clone --bare https://github.com/yarkhinephyo/dotfiles.git $HOME/dotfiles
 
 ```
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
-checkout config
+config checkout
 ```
 
 6. Restart the shell
