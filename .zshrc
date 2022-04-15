@@ -3,6 +3,13 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+if ! [ -d $HOME/.oh-my-zsh ]
+then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &
+  wait
+  mv .zshrc.pre-oh-my-zsh .zshrc
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -25,11 +32,8 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
 
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
+# Custom folder location
+ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
 
 # Zsh plugins
 plugins=(
