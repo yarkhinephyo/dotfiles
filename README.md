@@ -22,9 +22,12 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 git clone --bare https://github.com/yarkhinephyo/dotfiles.git $HOME/dotfiles
 ```
 
-5. Restart shell and checkout the configuration
+
+5. Checkout the configuration
 
 ```
+alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 checkout config
 ```
 
+6. Restart the shell
