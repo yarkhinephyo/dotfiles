@@ -19,7 +19,7 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 4. Clone the dotfiles repository
 
 ```
-git clone --bare https://github.com/yarkhinephyo/dotfiles.git $HOME/dotfiles
+git clone --bare --recursive https://github.com/yarkhinephyo/dotfiles.git $HOME/dotfiles
 ```
 
 
