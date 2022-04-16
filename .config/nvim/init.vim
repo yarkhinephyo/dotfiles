@@ -45,6 +45,7 @@ set showmatch
 set noswapfile
 
 " Non-plugin key mappings
+inoremap jk <Esc>
 noremap <Space> <Nop>
 map <Space> <Leader>
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
