@@ -38,6 +38,7 @@ ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
 # Zsh plugins
 plugins=(
   git
+  fancy-ctrl-z
   zsh-autosuggestions
 )
 
