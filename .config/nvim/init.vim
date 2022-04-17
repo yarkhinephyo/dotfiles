@@ -1,36 +1,9 @@
-call plug#begin()
-
-Plug 'morhetz/gruvbox'
-Plug 'preservim/nerdtree'
-Plug 'preservim/nerdcommenter'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-fugitive'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
-call plug#end()
+" Plugin related scripts
+runtime ./runtime/vim-plug.vim
+runtime! ./runtime/plugin/*.vim
 
 " Theme
 set background=dark
-autocmd vimenter * ++nested colorscheme gruvbox
-
-" NERDTree toggle to ctrl-t
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-h> :tabprevious<CR>
-nnoremap <C-l> :tabnext<CR>
-let NERDTreeShowHidden=1
-
-" Nerd commenter toggle to ctrl-/
-nmap <C-_> <Plug>NERDCommenterToggle
-vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
-
-" Find files using Telescope command-line sugar.
-nnoremap <C-p> <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " Tabs and spaces
 set tabstop=2
