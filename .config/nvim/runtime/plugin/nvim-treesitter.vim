@@ -22,7 +22,7 @@ require'nvim-treesitter.configs'.setup {
   },
 
   indent = {
-    disable = {},
+    disable = { "python", },
   }
 }
 EOF
