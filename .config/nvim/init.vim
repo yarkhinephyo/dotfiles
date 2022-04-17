@@ -35,4 +35,6 @@ nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 nnoremap <C-w>% <C-w>v
 nnoremap <C-w>" <C-w>s
 nnoremap <C-w>x <C-w>c
-
+" Map navigating tabs
+nnoremap <C-h> <Esc>:tabprevious<CR>
+nnoremap <C-l> <Esc>:tabnext<CR>
