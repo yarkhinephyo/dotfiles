@@ -77,7 +77,10 @@ fi
 
 # Dotfile repository configurations
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
-alias update="$config submodule update --init --recursive"
+alias update='
+  config submodule update --init --recursive && \
+  nvim --headless +PlugUpgrade +PlugInstall +PlugUpdate +qa
+'
 config config --local status.showUntrackedFiles no
 
 alias vim='nvim'
