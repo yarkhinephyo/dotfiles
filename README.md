@@ -26,6 +26,7 @@ git --git-dir=$HOME/dotfiles --work-tree=$HOME checkout
 4. Update the plugins and submodules
 
 ```bash
+source $HOME/.zshrc
 update
 ```
 
