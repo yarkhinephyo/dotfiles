@@ -1,6 +1,6 @@
 " Plugin related scripts
 runtime ./runtime/vim-plug.vim
-runtime! ./runtime/plugin/*.vim
+runtime! ./runtime/plugin/*
 
 " Theme
 set background=dark
@@ -26,9 +26,6 @@ set clipboard+=unnamedplus
 
 " Remap the <Esc>
 inoremap jk <Esc>
-" Remap the <Leader> to <Space>
-noremap <Space> <Nop>
-map <Space> <Leader>
 " Map double <Esc> to stop search highlights
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 " Map vim windows similar to tmux panes
@@ -38,3 +35,11 @@ nnoremap <C-w>x <C-w>c
 " Map navigating tabs
 nnoremap <C-h> <Esc>:tabprevious<CR>
 nnoremap <C-l> <Esc>:tabnext<CR>
+" Diagnostic functions
+nnoremap <silent> <Space>e <cmd>lua vim.diagnostic.open_float()<CR>
+nnoremap <silent> [d <cmd>lua vim.diagnostic.goto_prev()<CR>
+nnoremap <silent> d] <cmd>lua vim.diagnostic.goto_next()<CR>
+nnoremap <silent> <Space>q <cmd>lua vim.diagnostic.setloclist()<CR>
+" Map omnicomplete to <Ctrl-Space>
+inoremap <C-Space> <C-x><C-o>
+inoremap <C-@> <C-Space>

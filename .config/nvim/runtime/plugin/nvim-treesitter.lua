@@ -1,5 +1,4 @@
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
+require('nvim-treesitter.configs').setup {
   ensure_installed = {
     "bash",
     "lua",
@@ -11,7 +10,7 @@ require'nvim-treesitter.configs'.setup {
     "html"
   },
 
-  -- Install parsers asychronously
+  -- install parsers asychronously
   sync_install = false,
 
   ignore_install = {},
@@ -25,4 +24,3 @@ require'nvim-treesitter.configs'.setup {
     disable = { "python", },
   }
 }
-EOF

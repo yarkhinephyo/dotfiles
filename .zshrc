@@ -1,8 +1,6 @@
 #!/usr/bin/env zsh
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+# Install oh-my-zsh if not found
 if ! [ -d $HOME/.oh-my-zsh ]
 then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &
@@ -44,19 +42,24 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+
 # User configuration
+
+# Install nvm if not found
+if ! [ -d $HOME/.nvm ]
+then
+  sh "$(curl -fsSL https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash)" &
+  wait
+fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
 
 # Set `gdircolors` on MacOS
 if [[ "$(uname)" == "Darwin" ]]
@@ -72,10 +75,11 @@ else
   eval `dircolors ~/.dircolors`
 fi
 
-# Dotfile Configurations
+# Dotfile repository configurations
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 alias update="$config submodule update --init --recursive"
 config config --local status.showUntrackedFiles no
 
 alias vim='nvim'
 alias vi='vim'
+
