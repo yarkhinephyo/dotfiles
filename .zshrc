@@ -3,8 +3,7 @@
 # Install oh-my-zsh if not found
 if ! [ -d $HOME/.oh-my-zsh ]
 then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &
-  wait
+  "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash)"
   mv .zshrc.pre-oh-my-zsh .zshrc
 fi
 
@@ -16,10 +15,6 @@ ZSH_THEME="aussiegeek"
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
-
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -48,8 +43,7 @@ source $ZSH/oh-my-zsh.sh
 # Install nvm if not found
 if ! [ -d $HOME/.nvm ]
 then
-  sh "$(curl -fsSL https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash)" &
-  wait
+  "$(curl -fsSL https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash)"
 fi
 
 export NVM_DIR="$HOME/.nvm"
@@ -79,7 +73,8 @@ fi
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 alias update='
   config submodule update --init --recursive && \
-  nvim --headless +PlugUpgrade +PlugInstall +PlugUpdate +qa
+  nvim --headless +PlugUpgrade +PlugInstall +PlugUpdate +qa && \
+  omz update
 '
 config config --local status.showUntrackedFiles no
 
