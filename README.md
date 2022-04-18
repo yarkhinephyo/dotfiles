@@ -1,5 +1,11 @@
-Setup
+Dotfiles
 ---
+
+## Environments
+
+Tested on MacOS 10.15, Ubuntu 20.04, Ubuntu 20.04 (wsl)
+
+## Setupj
 
 1. Install zsh and set it as the default shell
 
@@ -30,11 +36,22 @@ source $HOME/.zshrc
 update
 ```
 
-5. (Optional) Install ripgrep for telescope, NodeJS for LSP features.
+## Optional
+
+1. Install ripgrep for telescope
 
 ```bash
 sudo apt install ripgrep
+```
 
+2. NodeJS for LSP features
+
+```bash
 nvm install <node-version>
 ```
 
+3. Install xclip for vim-tmux yank (Ubuntu non-wsl only)
+
+```bash
+sudo apt install xclip
+```
