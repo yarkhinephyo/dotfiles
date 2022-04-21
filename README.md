@@ -5,7 +5,7 @@ Dotfiles
 
 Tested on MacOS 10.15, Ubuntu 20.04, Ubuntu 20.04 (wsl)
 
-## Setupj
+## Setup
 
 1. Install zsh and set it as the default shell
 
@@ -50,7 +50,7 @@ sudo apt install ripgrep
 nvm install <node-version>
 ```
 
-3. Install xclip for vim-tmux yank (Ubuntu non-wsl only)
+3. Install xclip for vim-tmux yank (Required only for ubuntu non-wsl)
 
 ```bash
 sudo apt install xclip
