@@ -16,6 +16,10 @@ ZSH_THEME="aussiegeek"
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
 
+# Fix autosuggestions adding delay to prompt
+# https://github.com/zsh-users/zsh-autosuggestions/issues/544
+ZSH_AUTOSUGGEST_MANUAL_REBIND="true"
+
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
 
