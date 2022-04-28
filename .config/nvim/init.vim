@@ -18,7 +18,6 @@ set copyindent
 set number
 set showmatch
 set noswapfile
-set nowrap
 set formatoptions-=t
 
 " Clipboard (Linux requires xclip)
