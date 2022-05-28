@@ -16,6 +16,7 @@ set copyindent
 
 " UI config
 set number
+set relativenumber
 set showmatch
 set noswapfile
 set formatoptions-=t
@@ -30,6 +31,8 @@ set clipboard+=unnamedplus
 inoremap jk <Esc>
 " Map double <Esc> to stop search highlights
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
+" Map paste to not override register
+xnoremap p pgvy
 " Map vim windows similar to tmux panes
 nnoremap <C-w>% <C-w>v
 nnoremap <C-w>" <C-w>s
