@@ -20,6 +20,7 @@ set relativenumber
 set showmatch
 set noswapfile
 set formatoptions-=t
+set cursorline
 
 " Clipboard (Linux requires xclip)
 set clipboard+=unnamedplus
