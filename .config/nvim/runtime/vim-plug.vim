@@ -1,5 +1,6 @@
 call plug#begin()
 
+" Theme
 Plug 'morhetz/gruvbox'
 
 Plug 'tmsvg/pear-tree'
@@ -8,7 +9,9 @@ Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
+Plug 'https://github.com/inkarkat/vim-ReplaceWithRegister.git'
 
+" Require dependencies
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
