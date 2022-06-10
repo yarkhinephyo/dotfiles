@@ -83,7 +83,7 @@ alias update='
 # Don't show untracked files during 'config status'
 config config --local status.showUntrackedFiles no
 
-alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+alias tree='tree -L 2'
 alias vi='vim'
 alias vim='nvim'
 
