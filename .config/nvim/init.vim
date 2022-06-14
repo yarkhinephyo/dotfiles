@@ -30,7 +30,6 @@ set clipboard+=unnamedplus
 
 " Remap the <Esc>
 inoremap jk <Esc>
-xnoremap jk <Esc>
 " Map double <Esc> to stop search highlights
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 " Map paste to not override register
