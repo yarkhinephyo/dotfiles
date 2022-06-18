@@ -73,17 +73,20 @@ else
   eval `dircolors ~/.dircolors`
 fi
 
+# Vim installation directory
+export VIM_PATH="$HOME/nvim.appimage"
+
 # Dotfile repository configurations
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
-alias update='
+alias update="
   config submodule update --init --recursive && \
-  nvim --headless +PlugUpgrade +PlugInstall +PlugUpdate +qa && \
+  $VIM_PATH --headless +PlugUpgrade +PlugInstall +PlugUpdate +qa && \
   omz update
-'
+"
 # Don't show untracked files during 'config status'
 config config --local status.showUntrackedFiles no
 
 alias tree='tree -L 2'
 alias vi='vim'
-alias vim='nvim'
+alias vim="$VIM_PATH"
 
