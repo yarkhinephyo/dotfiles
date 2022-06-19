@@ -3,7 +3,7 @@ call plug#begin()
 " Theme
 Plug 'morhetz/gruvbox'
 
-Plug 'tmsvg/pear-tree'
+Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-surround'
