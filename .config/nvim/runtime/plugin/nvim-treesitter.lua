@@ -7,7 +7,9 @@ require('nvim-treesitter.configs').setup {
     "yaml",
     "dockerfile",
     "python",
-    "html"
+    "html",
+    "javascript",
+    "json",
   },
 
   -- install parsers asychronously
