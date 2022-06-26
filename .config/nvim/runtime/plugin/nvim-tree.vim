@@ -11,6 +11,7 @@ require("nvim-tree").setup({
         { key = "<C-r>", action = "full_rename"  },
         { key = "i", action = "vsplit"  },
         { key = "<C-t>", action = "close"  },
+        { key = "t", action = "tabnew"  },
       },
     },
   },

@@ -30,10 +30,14 @@ set clipboard+=unnamedplus
 
 " Remap the <Esc>
 inoremap jk <Esc>
-" Map double <Esc> to stop search highlights
+" Map key to stop search highlights
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 " Map paste to not override register
 xnoremap p pgvy
+" Map asterisk to not move around
+nnoremap * *N
+" Map space to center the screen
+nnoremap <Space><Space> zz
 " Map vim windows similar to tmux panes
 nnoremap <C-w>% <C-w>v
 nnoremap <C-w>" <C-w>s
