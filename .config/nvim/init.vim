@@ -30,6 +30,7 @@ set clipboard+=unnamedplus
 
 " Remap the <Esc>
 inoremap jk <Esc>
+xnoremap <Space> <Esc>
 " Map key to stop search highlights
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 " Map paste to not override register
@@ -38,6 +39,11 @@ xnoremap p pgvy
 nnoremap * *N
 " Map space to center the screen
 nnoremap <Space><Space> zz
+" Map tab and shift-tab for indentation
+nnoremap <Tab> >>
+nnoremap <S-tab> <<
+xnoremap <Tab> >gv
+xnoremap <S-tab> <gv
 " Map vim windows similar to tmux panes
 nnoremap <C-w>% <C-w>v
 nnoremap <C-w>" <C-w>s
@@ -45,6 +51,7 @@ nnoremap <C-w>x <C-w>c
 " Map navigating tabs
 nnoremap <C-h> <Esc>:tabprevious<CR>
 nnoremap <C-l> <Esc>:tabnext<CR>
+
 " Diagnostic functions
 nnoremap <silent> <Space>e <cmd>lua vim.diagnostic.open_float()<CR>
 nnoremap <silent> [d <cmd>lua vim.diagnostic.goto_prev()<CR>
