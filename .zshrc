@@ -86,6 +86,7 @@ alias update="
 # Don't show untracked files during 'config status'
 config config --local status.showUntrackedFiles no
 
+alias cl='clear'
 alias tree='tree -L 2'
 alias vi='vim'
 alias vim="$VIM_PATH"

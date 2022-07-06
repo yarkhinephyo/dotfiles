@@ -30,7 +30,7 @@ set clipboard+=unnamedplus
 
 " Remap the <Esc>
 inoremap jk <Esc>
-xnoremap <Space> <Esc>
+xnoremap <Enter> <Esc>
 " Map key to stop search highlights
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 " Map paste to not override register
@@ -38,7 +38,8 @@ xnoremap p pgvy
 " Map asterisk to not move around
 nnoremap * *N
 " Map space to center the screen
-nnoremap <Space><Space> zz
+nnoremap <space><space> zz
+xnoremap <space><space> zz
 " Map tab and shift-tab for indentation
 nnoremap <Tab> >>
 nnoremap <S-tab> <<
