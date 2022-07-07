@@ -31,6 +31,9 @@ set clipboard+=unnamedplus
 " Remap the <Esc>
 inoremap jk <Esc>
 xnoremap <Enter> <Esc>
+" Remap the semicolon to colon
+nnoremap ; :
+vnoremap ; :
 " Map key to stop search highlights
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 " Map paste to not override register
