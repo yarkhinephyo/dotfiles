@@ -78,16 +78,20 @@ export VIM_PATH="$HOME/nvim.appimage"
 
 # Dotfile repository configurations
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+# Don't show untracked files during 'config status'
+config config --local status.showUntrackedFiles no
+# Update git-submodules, vim, oh-my-zsh
 alias update="
   config submodule update --init --recursive && \
   $VIM_PATH --headless +PlugUpgrade +PlugInstall +PlugUpdate +qa && \
   omz update
 "
-# Don't show untracked files during 'config status'
-config config --local status.showUntrackedFiles no
 
 alias cl='clear'
 alias tree='tree -L 2'
 alias vi='vim'
 alias vim="$VIM_PATH"
+alias ta='tmux attach -t'
+alias tn='tmux new-session -s'
+alias tl='tmux list-sessions'
 
