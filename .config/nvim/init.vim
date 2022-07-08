@@ -43,11 +43,12 @@ nnoremap * *N
 " Map space to center the screen
 nnoremap <space><space> zz
 xnoremap <space><space> zz
-" Map tab and shift-tab for indentation
-nnoremap <Tab> >>
-nnoremap <S-tab> <<
+" Map tab and shift-tab for indentation in visual mode
 xnoremap <Tab> >gv
 xnoremap <S-tab> <gv
+" Map tab and shift-tab for navigating buffers in normal mode
+nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
+nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
 " Map vim windows similar to tmux panes
 nnoremap <C-w>% <C-w>v
 nnoremap <C-w>" <C-w>s
