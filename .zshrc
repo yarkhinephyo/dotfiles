@@ -37,6 +37,7 @@ plugins=(
   git
   fancy-ctrl-z
   zsh-autosuggestions
+  copybuffer
 )
 
 source $ZSH/oh-my-zsh.sh
