@@ -9,8 +9,8 @@ if has("unix")
       \    '*': 'pbcopy',
       \ },
       \ 'paste': {
-      \    '+': 'pbcopy',
-      \    '*': 'pbcopy',
+      \    '+': 'pbpaste',
+      \    '*': 'pbpaste',
       \ },
       \ 'cache_enabled': 0,
     \ }
