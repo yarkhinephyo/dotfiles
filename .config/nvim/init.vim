@@ -36,6 +36,7 @@ nnoremap ; :
 vnoremap ; :
 " Map key to stop search highlights
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
+nnoremap <silent> <Enter> <Esc>:nohlsearch<CR><Esc>
 " Map paste to not override register
 xnoremap p pgvy
 " Map asterisk to not move around
