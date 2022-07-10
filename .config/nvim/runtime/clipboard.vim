@@ -23,19 +23,9 @@ if has("unix")
         autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
       augroup END
     else
-      " Linux clipboard (linux requires xclip)
-      let g:clipboard = {
-        \ 'name': 'xclip',
-        \ 'copy': {
-        \    '+': 'xclip -selection clipboard -i',
-        \    '*': 'xclip -selection primary -i',
-        \ },
-        \ 'paste': {
-        \    '+': 'xclip -selection clipboard -o',
-        \    '*': 'xclip -selection primary -o',
-        \ },
-        \ 'cache_enabled': 0,
-      \ }
+      "
+      " No system clipboard integration on remote server
+      "
     endif
   endif
 endif
