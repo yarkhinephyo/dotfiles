@@ -1,7 +1,7 @@
 " Plugin related scripts
 runtime ./runtime/vim-plug.vim
 runtime! ./runtime/plugin/*
-runtime ./runtime/wsl-yank-support.vim
+runtime ./runtime/clipboard.vim
 
 " Theme
 set background=dark
@@ -21,10 +21,6 @@ set showmatch
 set noswapfile
 set formatoptions-=t
 set cursorline
-
-" Clipboard (Linux requires xclip)
-set clipboard+=unnamedplus
-
 
 " Non-plugin key mappings
 
