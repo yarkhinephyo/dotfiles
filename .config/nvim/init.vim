@@ -53,11 +53,11 @@ nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :wri
 nnoremap <C-w>% <C-w>v
 nnoremap <C-w>" <C-w>s
 nnoremap <C-w>x <C-w>c
-" Resize vim windows similar to h j k l movement
-nnoremap 8 <Esc>:res +2<CR> " increase pane by 2
-nnoremap 9 <Esc>:res -2<CR> " decrease pane by 2
-nnoremap 0 <Esc>:vertical res +2<CR> " vertical increase pane by 2
-nnoremap 7 <Esc>:vertical res -2<CR> " vertical decrease pane by 2
+" Resize vim windows with arrow keys
+nnoremap <Down> <Esc>:res +2<CR> " increase pane by 2
+nnoremap <Up> <Esc>:res -2<CR> " decrease pane by 2
+nnoremap <Right> <Esc>:vertical res +2<CR> " vertical increase pane by 2
+nnoremap <Left> <Esc>:vertical res -2<CR> " vertical decrease pane by 2
 " Map navigating tabs
 nnoremap <C-h> <Esc>:tabprevious<CR>
 nnoremap <C-l> <Esc>:tabnext<CR>
