@@ -51,8 +51,7 @@ sudo apt install ripgrep
 nvm install <node-version>
 ```
 
-3. Install xclip for vim-tmux yank (Required only for ubuntu non-wsl)
+## Note
 
-```bash
-sudo apt install xclip
-```
+System clipboard is unsupported for remote servers.
+
