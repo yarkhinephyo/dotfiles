@@ -1,4 +1,3 @@
-lua << EOF
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
   view = {
@@ -33,7 +32,6 @@ require("nvim-tree").setup({
     enable = false,
   },
 })
-EOF
 
-nnoremap <C-t> :NvimTreeToggle<CR>
+vim.api.nvim_set_keymap('n', '<C-t>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 
