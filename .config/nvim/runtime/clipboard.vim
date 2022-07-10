@@ -27,12 +27,12 @@ if has("unix")
       let g:clipboard = {
         \ 'name': 'xclip',
         \ 'copy': {
-        \    '+': 'xclip -ib',
-        \    '*': 'xclip -ip',
+        \    '+': 'xclip -selection clipboard -i',
+        \    '*': 'xclip -selection primary -i',
         \ },
         \ 'paste': {
-        \    '+': 'xclip -ob',
-        \    '*': 'xclip -op',
+        \    '+': 'xclip -selection clipboard -o',
+        \    '*': 'xclip -selection primary -o',
         \ },
         \ 'cache_enabled': 0,
       \ }
