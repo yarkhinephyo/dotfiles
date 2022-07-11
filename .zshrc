@@ -23,6 +23,7 @@ source $HOME/.zsh/dirhistory.zsh
 source $HOME/.zsh/nvm-setup.zsh
 
 # Zsh highlight completion with tab
+autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
 
 # Map control to skip words in terminal
