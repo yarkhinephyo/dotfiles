@@ -15,7 +15,6 @@
 # - lemonade (for SSH) https://github.com/pocke/lemonade
 # - doitclient (for SSH) http://www.chiark.greenend.org.uk/~sgtatham/doit/
 # - win32yank (Windows)
-# - tmux (if $TMUX is set)
 #
 # Defines two functions, clipcopy and clippaste, based on the detected platform.
 ##
@@ -79,9 +78,6 @@ elif (( ${+commands[win32yank]}  )); then
 elif [[ $OSTYPE == linux-android*  ]] && (( $+commands[termux-clipboard-set]  )); then
   function clipcopy() { termux-clipboard-set < "${1:-/dev/stdin}";  }
   function clippaste() { termux-clipboard-get;  }
-elif [ -n "${TMUX:-}"  ] && (( ${+commands[tmux]}  )); then
-  function clipcopy() { tmux load-buffer "${1:--}";  }
-  function clippaste() { tmux save-buffer -;  }
 elif [[ $(uname -r) = *icrosoft*  ]]; then
   function clipcopy() { clip.exe < "${1:-/dev/stdin}";  }
   function clippaste() { powershell.exe -noprofile -command get-clipboard;  }

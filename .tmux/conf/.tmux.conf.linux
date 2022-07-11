@@ -1,4 +1,4 @@
 # Check if in WSL
 if-shell -b '[ -n "$WSL_DISTRO_NAME" ]' \
   'bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "clip.exe"' \
-  'bind-key -t vi-copy "y"" copy-selection
+  'bind-key -t vi-copy y copy-selection'
