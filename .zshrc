@@ -1,46 +1,34 @@
 #!/usr/bin/env zsh
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
-# Install oh-my-zsh if not found
-if ! [ -d $ZSH ]
-then
-  "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash)"
-  mv .zshrc.pre-oh-my-zsh .zshrc
-fi
-
 # (autocomplete plugin) Fix autosuggestions adding delay to prompt
 # https://github.com/zsh-users/zsh-autosuggestions/issues/544
 ZSH_AUTOSUGGEST_MANUAL_REBIND="true"
 
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="aussiegeek"
+# Zsh history to help with auto-complete
+export HISTFILE=$HOME/.zsh_history
+export HISTSIZE=10000
+export SAVEHIST=10000
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_FIND_NO_DUPS
 
-# Uncomment the following line to use case-sensitive completion.
-CASE_SENSITIVE="true"
+# Zsh highlight completion with tab
+zstyle ':completion:*' menu select
 
-# Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# Helper to handle system clipboard
+source $HOME/.zsh/clipboard.zsh
+# Helper to handle colors
+source $HOME/.zsh/themes/theme-and-appearance.zsh
 
-# Custom folder location
-ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
-
-# Zsh plugins
-plugins=(
-  git
-  fancy-ctrl-z
-  zsh-autosuggestions
-  copybuffer
-)
+# Customizations
+source $HOME/.zsh/themes/aussiegeek.zsh
+source $HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.zsh/fancy-ctrl-z.zsh
+source $HOME/.zsh/copybuffer.zsh
+source $HOME/.zsh/nvm-setup.zsh
 
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-source $ZSH_CUSTOM/nvm-setup.zsh
-source $ZSH/oh-my-zsh.sh
-
 
 # User configuration
 
@@ -48,20 +36,6 @@ export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
-
-# Set `gdircolors` on MacOS
-if [[ "$(uname)" == "Darwin" ]]
-then
-  if ! type gdircolors > /dev/null;
-  then
-    brew install coreutils
-  fi
-  eval $(gdircolors ~/.dircolors)
-  alias ls='gls --color=auto'
-  alias ll='ls -al'
-else
-  eval `dircolors ~/.dircolors`
-fi
 
 # Vim installation directory
 export VIM_PATH="$HOME/nvim.appimage"
