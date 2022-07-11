@@ -1,30 +1,24 @@
 #!/usr/bin/env zsh
 
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
 # Install oh-my-zsh if not found
-if ! [ -d $HOME/.oh-my-zsh ]
+if ! [ -d $ZSH ]
 then
   "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash)"
   mv .zshrc.pre-oh-my-zsh .zshrc
 fi
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+# (autocomplete plugin) Fix autosuggestions adding delay to prompt
+# https://github.com/zsh-users/zsh-autosuggestions/issues/544
+ZSH_AUTOSUGGEST_MANUAL_REBIND="true"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="aussiegeek"
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
-
-# Fix autosuggestions adding delay to prompt
-# https://github.com/zsh-users/zsh-autosuggestions/issues/544
-ZSH_AUTOSUGGEST_MANUAL_REBIND="true"
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
@@ -40,20 +34,15 @@ plugins=(
   copybuffer
 )
 
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+source $ZSH_CUSTOM/nvm-setup.zsh
 source $ZSH/oh-my-zsh.sh
 
 
 # User configuration
-
-# Install nvm if not found
-if ! [ -d $HOME/.nvm ]
-then
-  "$(curl -fsSL https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash)"
-fi
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export MANPATH="/usr/local/man:$MANPATH"
 
