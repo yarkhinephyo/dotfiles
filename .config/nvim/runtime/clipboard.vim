@@ -1,7 +1,7 @@
 if has("unix")
   let s:uname = system("uname")
   if s:uname == "Darwin\n"
-    " Mac clipboard 
+    "" Mac clipboard 
     let g:clipboard = {
       \ 'name': 'pbcopy',
       \ 'copy': {
@@ -17,17 +17,16 @@ if has("unix")
   else
     let s:clip = '/mnt/c/Windows/System32/clip.exe'
     if executable(s:clip)
-      " WSL clipboard
+      "" WSL clipboard
       augroup WSLYank
         autocmd!
         autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
       augroup END
     else
-      "
-      " No system clipboard integration on remote server
-      "
+      ""
+      "" No system clipboard integration on remote server
+      ""
     endif
   endif
 endif
 
-set clipboard+=unnamed
