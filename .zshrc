@@ -52,7 +52,9 @@ alias cl='clear'
 alias tree='tree -L 2'
 alias vi='vim'
 alias vim="$VIM_PATH"
+
 alias ta='tmux attach -t'
 alias tn='tmux new-session -s'
 alias tl='tmux list-sessions'
+alias tk='tmux kill-server'
 
