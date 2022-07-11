@@ -48,7 +48,6 @@ config config --local status.showUntrackedFiles no
 alias update="
   config submodule update --init --recursive && \
   $VIM_PATH --headless +PlugUpgrade +PlugInstall +PlugUpdate +qa && \
-  omz update
 "
 
 alias cl='clear'
