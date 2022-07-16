@@ -33,6 +33,11 @@ vnoremap ; :
 " Map key to stop search highlights
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 nnoremap <silent> <Enter> <Esc>:nohlsearch<CR><Esc>
+" Map s to search forward and backward
+nnoremap s /
+vnoremap s /
+nnoremap S ?
+vnoremap S ?
 " Map asterisk to not move around
 nnoremap * *N
 " Map space to center the screen
