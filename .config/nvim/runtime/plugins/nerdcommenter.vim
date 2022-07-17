@@ -1,3 +1,3 @@
 " Nerd commenter toggle to ctrl-/
-nmap <C-_> <Plug>NERDCommenterToggle
-vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
+nmap gc <Plug>NERDCommenterToggle
+vmap gc <Plug>NERDCommenterToggle<CR>gv
