@@ -13,6 +13,8 @@ nnoremap * *N
 " Map space to center the screen
 nnoremap <space><space> zz
 xnoremap <space><space> zz
+" Map for inserting space in normal mode
+nnoremap ss a<space><Esc>
 " Map tab and shift-tab for indentation in visual mode
 xnoremap <Tab> >gv
 xnoremap <S-tab> <gv
