@@ -30,9 +30,6 @@ nnoremap <Down> <Esc>:res +2<CR> " increase pane by 2
 nnoremap <Up> <Esc>:res -2<CR> " decrease pane by 2
 nnoremap <Right> <Esc>:vertical res +2<CR> " vertical increase pane by 2
 nnoremap <Left> <Esc>:vertical res -2<CR> " vertical decrease pane by 2
-" Map navigating tabs
-nnoremap <C-h> <Esc>:tabprevious<CR>
-nnoremap <C-l> <Esc>:tabnext<CR>
 
 if has('nvim')
   " Diagnostic functions
