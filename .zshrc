@@ -19,7 +19,6 @@ source $HOME/.zsh/lib/theme-and-appearance.zsh
 source $HOME/.zsh/themes/aussiegeek.zsh
 source $HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.zsh/fancy-ctrl-z.zsh
-source $HOME/.zsh/dirhistory.zsh
 source $HOME/.zsh/nvm-setup.zsh
 
 # Zsh highlight completion with tab
@@ -29,10 +28,6 @@ zstyle ':completion:*' menu select
 # Map control to skip words in terminal
 bindkey ";5C" forward-word
 bindkey ";5D" backward-word
-
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # User configuration
 
