@@ -1,0 +1,37 @@
+set number relativenumber
+set idearefactormode=keep
+set ideajoin
+set surround
+set commentary
+set ReplaceWithRegister
+
+let mapleader = "\"
+
+inoremap jk <Esc>
+vnoremap <Enter> <Esc>
+
+nnoremap ; :
+vnoremap ; :
+
+nnoremap * *N
+
+nnoremap <space><space> zz
+xnoremap <space><space> zz
+
+xnoremap <Tab> >gv
+xnoremap <S-tab> <gv
+
+set clipboard+=unnamed
+
+" actions
+nmap <S-Tab> <action>(PreviousTab)
+nmap <Tab> <action>(NextTab)
+nmap <leader>rn <action>(RenameElement)
+nmap d] <action>(GotoNextError)
+nmap K <Action>(ShowErrorDescription)
+
+set NERDTree
+nnoremap <C-t> :NERDTreeToggle<CR>
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
+
