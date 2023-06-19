@@ -31,6 +31,7 @@ nnoremap d] :action GotoNextError<CR>
 nnoremap K :action ShowErrorDescription<CR>
 nnoremap gi :action GotoImplementation<CR>
 nnoremap <C-p> :action SearchEverywhere<CR>
+nnoremap <D-p> :action SearchEverywhere<CR>
 nnoremap <C-w><C-w> :action SelectInProjectView<CR>
 
 set NERDTree
