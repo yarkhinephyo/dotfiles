@@ -1,4 +1,31 @@
+call plug#begin()
 
+  Plug 'morhetz/gruvbox'
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'preservim/nerdcommenter'
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-repeat'
+  Plug 'tpope/vim-fugitive'
+  Plug 'https://github.com/inkarkat/vim-ReplaceWithRegister.git'
+
+call plug#end()
+
+
+" NERD-COMMENTER
+"
+" Toggle to ctrl-/
+nmap gc <Plug>NERDCommenterToggle
+vmap gc <Plug>NERDCommenterToggle<CR>gv
+
+
+" GRUVBOX
+"
+" use autocmd vimenter, to be sure that all plugins are loaded completely and then use gruvbox
+autocmd vimenter * ++nested colorscheme gruvbox
+
+
+" KEY-MAPPINGS
+"
 " Remap the <Esc>
 inoremap jk <Esc>
 xnoremap <Enter> <Esc>
@@ -31,13 +58,23 @@ nnoremap <Up> <Esc>:res -2<CR> " decrease pane by 2
 nnoremap <Right> <Esc>:vertical res +2<CR> " vertical increase pane by 2
 nnoremap <Left> <Esc>:vertical res -2<CR> " vertical decrease pane by 2
 
-if has('nvim')
-  " Diagnostic functions
-  nnoremap <silent> <Space>e <cmd>lua vim.diagnostic.open_float()<CR>
-  nnoremap <silent> [d <cmd>lua vim.diagnostic.goto_prev()<CR>
-  nnoremap <silent> d] <cmd>lua vim.diagnostic.goto_next()<CR>
-  nnoremap <silent> <Space>q <cmd>lua vim.diagnostic.setloclist()<CR>
-  " Map omnicomplete to <Ctrl-Space>
-  inoremap <C-Space> <C-x><C-o>
-  inoremap <C-@> <C-Space>
-endif
+
+" Theme
+set background=dark
+
+" Tabs and spaces
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+set autoindent
+set copyindent
+
+" UI config
+set number
+set relativenumber
+set showmatch
+set noswapfile
+set formatoptions-=t
+set cursorline
+

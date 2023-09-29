@@ -13,52 +13,25 @@ Tested on MacOS 10.15, Ubuntu 20.04, Ubuntu 20.04 (wsl)
 chsh -s $(which zsh)
 ```
 
-2. Install neovim
-
-```bash
-# For Linux and Mac Intel
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod u+x nvim.appimage
-
-# For Mac M1
-brew install neovim
-```
-
-3. Install vim-plug
+2. Install vim-plug
 
 ```
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-4. Clone the dotfiles repository
+3. Clone the dotfiles repository
 
 ```bash
 git clone --bare --recursive https://github.com/yarkhinephyo/dotfiles.git $HOME/dotfiles
 git --git-dir=$HOME/dotfiles --work-tree=$HOME checkout
 ```
 
-5. Update VIM_PATH in `.zshrc`
-
-6. Update the plugins and submodules
+4. Update the plugins and submodules
 
 ```bash
 source $HOME/.zshrc
 update
-```
-
-## Optional
-
-1. Install ripgrep for telescope
-
-```bash
-sudo apt install ripgrep
-```
-
-2. NodeJS for LSP features
-
-```bash
-nvm install <node-version>
 ```
 
 ## System clipboard
