@@ -34,17 +34,3 @@ source $HOME/.zshrc
 update
 ```
 
-## System clipboard
-
-- Vim
-  - Local MacOS: Integrated.
-  - Local WSL: Integrated.
-  - Local Linux Desktop: Only Vim buffers.
-  - Remote Linux Server: Only Vim buffers.
-
-- Tmux
-  - Local MacOS: Integrated. Use \<Space\> and \<Enter\> for Tmux buffer.
-  - Local WSL: Integrated. Use \<Space\> and \<Enter\> for Tmux buffer.
-  - Local Linux Desktop: Only Tmux buffer.
-  - Remote Linux Server: Only Tmux buffer.
-
