@@ -10,9 +10,6 @@ let mapleader = "\"
 inoremap jk <Esc>
 vnoremap <Enter> <Esc>
 
-nnoremap ; :
-vnoremap ; :
-
 nnoremap * *N
 
 nnoremap <space><space> zz

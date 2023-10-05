@@ -29,9 +29,6 @@ autocmd vimenter * ++nested colorscheme gruvbox
 " Remap the <Esc>
 inoremap jk <Esc>
 xnoremap <Enter> <Esc>
-" Remap the semicolon to colon
-nnoremap ; :
-vnoremap ; :
 " Map key to stop search highlights
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 nnoremap <silent> <Enter> <Esc>:nohlsearch<CR><Esc>
