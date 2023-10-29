@@ -3,7 +3,7 @@ Dotfiles
 
 ## Environments
 
-Tested on MacOS 10.15, Ubuntu 20.04, Ubuntu 20.04 (wsl)
+Tested on MacOS 10.15, Mac 13.14, Ubuntu 20.04
 
 ## Setup
 
