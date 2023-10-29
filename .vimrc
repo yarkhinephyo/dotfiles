@@ -74,4 +74,5 @@ set showmatch
 set noswapfile
 set formatoptions-=t
 set cursorline
+set hlsearch
 
